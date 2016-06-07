@@ -47,6 +47,7 @@
     };
 
     var _initScene = function () {
+        console.log('new THREE.Scene()-----------------');
         _sceneData.scene = new THREE.Scene();
         console.log('Checking _sceneData.scene', _sceneData.scene);
         _sceneData.animationFrame = false;
