@@ -25,7 +25,7 @@
                 return container;
             });
 
-            stub(control, 'createEvent');
+            stub(control, 'checkWebGL');
 
             console.log('try exec init scene');
 
