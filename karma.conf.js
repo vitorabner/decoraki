@@ -9,7 +9,8 @@ module.exports = function(config) {
             'karma-chai',
             'karma-sinon',
             'karma-mocha',
-            'karma-chrome-launcher'
+            'karma-chrome-launcher',
+            'karma-firefox-launcher'
         ],
 
         frameworks: ['mocha', 'sinon', 'chai'],
@@ -34,7 +35,7 @@ module.exports = function(config) {
         ],
 
         reporters: ['progress'],
-        browsers: ['Chrome'],
+        browsers: ['Chrome', 'Firefox'],
 
         customLaunchers: {
             chromeTravis: {
@@ -43,12 +44,12 @@ module.exports = function(config) {
             }
         },
 
-        singleRun: false
+        singleRun: true
     }
 
     if(process.env.TRAVIS){
-        configuration.browsers = ['chromeTravis'];
+        configuration.browsers = ['chromeTravis', 'Firefox'];
     }
 
     config.set(configuration);
-}
+};

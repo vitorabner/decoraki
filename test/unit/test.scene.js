@@ -25,6 +25,8 @@
                 return container;
             });
 
+            stub(control, 'checkWebGL');
+
             scene.init();
         });
 
