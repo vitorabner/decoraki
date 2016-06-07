@@ -58,6 +58,8 @@ var js = [
     'src/javascript/app.js',
 ];
 
+
+//- Images tasks
 gulp.task('img', function() {
     return gulp.src(img)
                 .pipe(imagemin())
@@ -70,6 +72,7 @@ gulp.task('svg', function () {
                 .pipe(gulp.dest('dist/img'));
 });
 
+//- Handlebars tasks
 gulp.task('hbs', function () {
     var partials = gulp.src(hbs.partials)
             .pipe(handlebars())
@@ -94,6 +97,7 @@ gulp.task('hbs', function () {
                 .pipe(gulp.dest('dist/temporary-cache/hbs/'));
 });
 
+//- Javascript tasks
 gulp.task('lib', function() {
     var min = gulp.src(lib.min)
                 .pipe(concat('min.js'));
@@ -137,6 +141,7 @@ gulp.task('deploy-js', ['lib', 'hbs'], function() {
                 });
 });
 
+//- SASS tasks
 gulp.task('sass', function() {
     return gulp.src(scssIdx)
                 .pipe(sourcemaps.init())
@@ -147,6 +152,15 @@ gulp.task('sass', function() {
                 .pipe(gulp.dest('dist/css/'));
 });
 
+gulp.task('deploy-sass', function() {
+    return gulp.src(scssIdx)
+                .pipe(sass({outputStyle: 'compressed'}))
+                .pipe(rename({basename: 'index.min'}))
+                .pipe(autoprefixer({browsers: ['last 2 versions']}))
+                .pipe(gulp.dest('dist/css/'));
+});
+
+//- HTML tasks
 gulp.task('html', function() {
     return gulp.src(htmlIdx)
                 .pipe(htmlReplace({
@@ -165,6 +179,7 @@ gulp.task('deploy-html', function() {
                 .pipe(gulp.dest('dist/'));
 });
 
+//- Sync tasks
 gulp.task('bsync', function() {
     browserSync.init('dist/**/*',{
         server: {
@@ -173,10 +188,6 @@ gulp.task('bsync', function() {
         },
         startPath: "/"
     });
-});
-
-gulp.task('clean', function() {
-    del.sync(['./dist']);
 });
 
 gulp.task('watch', ['bsync'], function() {
@@ -190,11 +201,15 @@ gulp.task('watch', ['bsync'], function() {
     gulp.watch(html, ['html']);
 });
 
+gulp.task('clean', function() {
+    del.sync(['./dist']);
+});
+
 gulp.task('default', ['clean'], function() {
     gulp.start('html', 'img', 'svg', 'sass', 'js');
 });
 
 gulp.task('deploy', ['clean'], function() {
-    gulp.start('deploy-html', 'img', 'svg', 'sass', 'deploy-js');
+    gulp.start('img', 'svg','deploy-html', 'deploy-sass', 'deploy-js');
 });
 
