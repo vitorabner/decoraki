@@ -1,28 +1,28 @@
-(function () {
-    'use strict';
+// (function () {
+//     'use strict';
 
-    var expect = chai.expect;
+//     var expect = chai.expect;
 
-    describe('decoraki.geometry', function () {
+//     describe('decoraki.geometry', function () {
 
-        var geometry = decoraki.geometry;
+//         var geometry = decoraki.geometry;
 
-        describe('conversions', function () {
+//         describe('conversions', function () {
 
-            it('should convert degrees to radians', function () {
-                var radian = geometry.degreesToRadians(180);
+//             it('should convert degrees to radians', function () {
+//                 var radian = geometry.degreesToRadians(180);
 
-                expect(radian).to.equal(Math.PI);
-            });
+//                 expect(radian).to.equal(Math.PI);
+//             });
 
-            it('should convert radians to degrees', function () {
-                var degree = geometry.radiansToDegrees(Math.PI);
+//             it('should convert radians to degrees', function () {
+//                 var degree = geometry.radiansToDegrees(Math.PI);
 
-                expect(degree).to.equal(180);
-            });
+//                 expect(degree).to.equal(180);
+//             });
 
-        });
+//         });
 
-    });
+//     });
 
-}());
+// }());
