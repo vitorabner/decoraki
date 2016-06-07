@@ -67,6 +67,8 @@
             return;
         }
 
+        console.log('try new THREE.Scene()-----------------');
+
         _initScene();
         _initRenderer();
         _initCamera();
