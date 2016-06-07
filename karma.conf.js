@@ -2,7 +2,7 @@ module.exports = function(config) {
     config.set({
 
         client: {
-            captureConsole: false
+            captureConsole: true
         },
 
         plugins: [
