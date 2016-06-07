@@ -1,0 +1,17 @@
+//	Usage:
+
+//	<div class="main-header">
+//		<div class="logo">
+//			decoraki
+//		</div>
+//	</div>
+
+.main-header {
+	height: 100%;
+
+	@include flexbox-container ($align-items: center, $align-content: center);
+}
+
+.main-header__btn-github {
+
+}

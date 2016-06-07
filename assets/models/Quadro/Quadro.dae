@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.4.1" xmlns="http://www.collada.org/2005/11/COLLADASchema">
+  <asset>
+    <contributor>
+      <author>Decoraki</author>
+      <authoring_tool>Unity3D 4.3.4f1 - COLLADA exporter v1.4.14</authoring_tool>
+      <comments>Decoraki</comments>
+      <copyright />
+      <source_data />
+    </contributor>
+    <created>2014-12-29T21:43:33.229325-02:00</created>
+    <modified>2014-12-29T21:43:33.229359-02:00</modified>
+    <unit meter="1" name="meter" />
+    <up_axis>Y_UP</up_axis>
+  </asset>
+  <library_images>
+    <image id="_e7f2586c1a82d443498a1545639324f9" name="Quadro_2_Vidro">
+      <init_from>./Quadro_2_Vidro.png</init_from>
+    </image>
+    <image id="_3cb4d8bdb339b4fb584c9a54eab32179" name="Quadro_3_Imagem">
+      <init_from>./Quadro_3_Imagem.jpg</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="_ee6573e4daabf4f80bc965f4956046ac" name="Quadro_1_Moldura">
+      <instance_effect url="#_ee6573e4daabf4f80bc965f4956046ac-fx" />
+    </material>
+    <material id="_44b34d53c5ee3450b9b6b08533dd163c" name="Quadro_2_Vidro">
+      <instance_effect url="#_44b34d53c5ee3450b9b6b08533dd163c-fx" />
+    </material>
+    <material id="_e45ce0a2722344514ae0c3e5d4debfca" name="Quadro_3_Imagem">
+      <instance_effect url="#_e45ce0a2722344514ae0c3e5d4debfca-fx" />
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="_ee6573e4daabf4f80bc965f4956046ac-fx" name="Diffuse">
+      <profile_COMMON>
+        <newparam sid="_Color">
+          <semantic>Main Color</semantic>
+          <float4>1.000000 1.000000 1.000000 1.000000</float4>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <diffuse>
+              <color>1.000000 1.000000 1.000000 1.000000</color>
+            </diffuse>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_44b34d53c5ee3450b9b6b08533dd163c-fx" name="Transparent/Diffuse">
+      <profile_COMMON>
+        <newparam sid="_Color">
+          <semantic>Main Color</semantic>
+          <float4>1.000000 1.000000 1.000000 1.000000</float4>
+        </newparam>
+        <newparam sid="_e7f2586c1a82d443498a1545639324f9-surface">
+          <semantic>Base (RGB) Trans (A)</semantic>
+          <surface type="2D">
+            <init_from>_e7f2586c1a82d443498a1545639324f9</init_from>
+            <format>DXT5</format>
+          </surface>
+        </newparam>
+        <newparam sid="_e7f2586c1a82d443498a1545639324f9-sampler">
+          <sampler2D>
+            <source>_e7f2586c1a82d443498a1545639324f9-surface</source>
+            <minfilter>LINEAR_MIPMAP_NEAREST</minfilter>
+            <magfilter>LINEAR</magfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <diffuse>
+              <texture texture="_e7f2586c1a82d443498a1545639324f9-sampler" texcoord="TEX0" />
+            </diffuse>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="_e45ce0a2722344514ae0c3e5d4debfca-fx" name="Diffuse">
+      <profile_COMMON>
+        <newparam sid="_Color">
+          <semantic>Main Color</semantic>
+          <float4>1.000000 1.000000 1.000000 1.000000</float4>
+        </newparam>
+        <newparam sid="_3cb4d8bdb339b4fb584c9a54eab32179-surface">
+          <semantic>Base (RGB)</semantic>
+          <surface type="2D">
+            <init_from>_3cb4d8bdb339b4fb584c9a54eab32179</init_from>
+            <format>DXT1</format>
+          </surface>
+        </newparam>
+        <newparam sid="_3cb4d8bdb339b4fb584c9a54eab32179-sampler">
+          <sampler2D>
+            <source>_3cb4d8bdb339b4fb584c9a54eab32179-surface</source>
+            <minfilter>LINEAR_MIPMAP_NEAREST</minfilter>
+            <magfilter>LINEAR</magfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <diffuse>
+              <texture texture="_3cb4d8bdb339b4fb584c9a54eab32179-sampler" texcoord="TEX0" />
+            </diffuse>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="_1632" name="Quadro_1_Moldura">
+      <mesh>
+        <source id="_1632-positions">
+          <float_array id="_1632-positions-array" count="144">
+0.230000 0.020000 0.015000 
+0.230000 0.380000 0.000000 
+0.230000 0.380000 0.015000 
+0.230000 0.020000 0.000000 
+0.250000 0.400000 0.000000 
+0.230000 0.020000 0.000000 
+0.250000 0.000000 0.000000 
+0.230000 0.380000 0.000000 
+-0.230000 0.380000 0.000000 
+-0.250000 0.400000 0.000000 
+-0.250000 0.000000 0.000000 
+-0.230000 0.020000 0.000000 
+0.250000 0.400000 0.015000 
+0.230000 0.020000 0.015000 
+0.230000 0.380000 0.015000 
+0.250000 0.000000 0.015000 
+-0.230000 0.380000 0.015000 
+-0.250000 0.400000 0.015000 
+-0.250000 0.000000 0.015000 
+-0.230000 0.020000 0.015000 
+0.250000 0.400000 0.015000 
+0.250000 0.000000 0.000000 
+0.250000 0.000000 0.015000 
+0.250000 0.400000 0.000000 
+-0.250000 0.400000 0.015000 
+0.250000 0.400000 0.000000 
+0.250000 0.400000 0.015000 
+-0.250000 0.400000 0.000000 
+0.230000 0.380000 0.015000 
+-0.230000 0.380000 0.000000 
+-0.230000 0.380000 0.015000 
+0.230000 0.380000 0.000000 
+-0.230000 0.020000 0.015000 
+0.230000 0.020000 0.000000 
+0.230000 0.020000 0.015000 
+-0.230000 0.020000 0.000000 
+-0.230000 0.380000 0.015000 
+-0.230000 0.020000 0.000000 
+-0.230000 0.020000 0.015000 
+-0.230000 0.380000 0.000000 
+0.250000 0.000000 0.015000 
+-0.250000 0.000000 0.000000 
+-0.250000 0.000000 0.015000 
+0.250000 0.000000 0.000000 
+-0.250000 0.000000 0.015000 
+-0.250000 0.400000 0.000000 
+-0.250000 0.400000 0.015000 
+-0.250000 0.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="48" source="#_1632-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_1632-normals">
+          <float_array id="_1632-normals-array" count="144">
+-1.000000 0.000000 0.000000 
+-1.000000 0.000000 0.000000 
+-1.000000 0.000000 0.000000 
+-1.000000 0.000000 0.000000 
+0.000000 0.000000 -1.000000 
+0.000000 0.000000 -1.000000 
+0.000000 0.000000 -1.000000 
+0.000000 0.000000 -1.000000 
+0.000000 0.000000 -1.000000 
+0.000000 0.000000 -1.000000 
+0.000000 0.000000 -1.000000 
+0.000000 0.000000 -1.000000 
+0.000000 0.000000 1.000000 
+0.000000 0.000000 1.000000 
+0.000000 0.000000 1.000000 
+0.000000 0.000000 1.000000 
+0.000000 0.000000 1.000000 
+0.000000 0.000000 1.000000 
+0.000000 0.000000 1.000000 
+0.000000 0.000000 1.000000 
+1.000000 0.000000 0.000000 
+1.000000 0.000000 0.000000 
+1.000000 0.000000 0.000000 
+1.000000 0.000000 0.000000 
+0.000000 1.000000 0.000000 
+0.000000 1.000000 0.000000 
+0.000000 1.000000 0.000000 
+0.000000 1.000000 0.000000 
+0.000000 -1.000000 0.000000 
+0.000000 -1.000000 0.000000 
+0.000000 -1.000000 0.000000 
+0.000000 -1.000000 0.000000 
+0.000000 1.000000 0.000000 
+0.000000 1.000000 0.000000 
+0.000000 1.000000 0.000000 
+0.000000 1.000000 0.000000 
+1.000000 0.000000 0.000000 
+1.000000 0.000000 0.000000 
+1.000000 0.000000 0.000000 
+1.000000 0.000000 0.000000 
+0.000000 -1.000000 0.000000 
+0.000000 -1.000000 0.000000 
+0.000000 -1.000000 0.000000 
+0.000000 -1.000000 0.000000 
+-1.000000 0.000000 0.000000 
+-1.000000 0.000000 0.000000 
+-1.000000 0.000000 0.000000 
+-1.000000 0.000000 0.000000</float_array>
+          <technique_common>
+            <accessor count="48" source="#_1632-normals-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_1632-uv0">
+          <float_array id="_1632-uv0-array" count="96">
+1.412529 -0.334790 
+0.765950 -0.446864 
+0.765950 -0.334790 
+1.412529 -0.446864 
+-0.708752 1.970000 
+-0.635487 0.577967 
+-0.708752 0.504702 
+-0.635487 1.896735 
+0.683281 1.896735 
+0.756546 1.970000 
+0.756546 0.504702 
+0.683281 0.577967 
+0.756546 0.495298 
+0.683281 -0.896735 
+0.683281 0.422034 
+0.756546 -0.970000 
+-0.635487 0.422034 
+-0.708752 0.495298 
+-0.708752 -0.970000 
+-0.635487 -0.896735 
+0.765950 -0.839216 
+1.447505 -0.721080 
+1.447505 -0.839216 
+0.765950 -0.721080 
+1.447504 -0.590296 
+0.765950 -0.708432 
+0.765950 -0.590296 
+1.447504 -0.708432 
+1.341507 -0.063903 
+0.765950 -0.189806 
+0.765950 -0.063903 
+1.341507 -0.189806 
+1.341507 -0.199197 
+0.765950 -0.325100 
+0.765950 -0.199197 
+1.341507 -0.325100 
+0.765950 -0.054512 
+1.341507 0.071391 
+1.341507 -0.054512 
+0.765950 0.071391 
+1.447504 -0.459512 
+0.765950 -0.577648 
+0.765950 -0.459512 
+1.447504 -0.577648 
+1.447504 -0.851864 
+0.765950 -0.970000 
+0.765950 -0.851864 
+1.447504 -0.970000</float_array>
+          <technique_common>
+            <accessor count="48" source="#_1632-uv0-array" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="_1632-vertices">
+          <input semantic="POSITION" source="#_1632-positions" />
+        </vertices>
+        <triangles count="32" material="material-0">
+          <input offset="0" semantic="VERTEX" source="#_1632-vertices" />
+          <input offset="0" semantic="NORMAL" source="#_1632-normals" />
+          <input offset="0" semantic="TEXCOORD" source="#_1632-uv0" set="0" />
+          <p>1 0 2 3 0 1 5 4 6 7 4 5 7 8 4 4 8 9 10 5 6 8 10 9 11 5 10 11 10 8 13 12 14 15 12 13 12 16 14 17 16 12 15 13 18 17 18 16 18 13 19 16 18 19 21 20 22 23 20 21 25 24 26 27 24 25 29 28 30 31 28 29 33 32 34 35 32 33 37 36 38 39 36 37 41 40 42 43 40 41 45 44 46 47 44 45</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="_1634" name="Quadro_2_Vidro">
+      <mesh>
+        <source id="_1634-positions">
+          <float_array id="_1634-positions-array" count="12">
+-0.237000 0.013000 0.010000 
+0.237000 0.387000 0.010000 
+0.237000 0.013000 0.010000 
+-0.237000 0.387000 0.010000</float_array>
+          <technique_common>
+            <accessor count="4" source="#_1634-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_1634-normals">
+          <float_array id="_1634-normals-array" count="12">
+0.000000 0.000000 1.000000 
+0.000000 0.000000 1.000000 
+0.000000 0.000000 1.000000 
+0.000000 0.000000 1.000000</float_array>
+          <technique_common>
+            <accessor count="4" source="#_1634-normals-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_1634-uv0">
+          <float_array id="_1634-uv0-array" count="8">
+0.012195 0.012195 
+0.987805 0.987805 
+0.987805 0.012195 
+0.012195 0.987805</float_array>
+          <technique_common>
+            <accessor count="4" source="#_1634-uv0-array" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="_1634-vertices">
+          <input semantic="POSITION" source="#_1634-positions" />
+        </vertices>
+        <triangles count="2" material="material-0">
+          <input offset="0" semantic="VERTEX" source="#_1634-vertices" />
+          <input offset="0" semantic="NORMAL" source="#_1634-normals" />
+          <input offset="0" semantic="TEXCOORD" source="#_1634-uv0" set="0" />
+          <p>1 0 2 3 0 1</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="_1636" name="Quadro_3_Imagem">
+      <mesh>
+        <source id="_1636-positions">
+          <float_array id="_1636-positions-array" count="12">
+-0.237000 0.013000 0.000000 
+0.237000 0.387000 0.000000 
+0.237000 0.013000 0.000000 
+-0.237000 0.387000 0.000000</float_array>
+          <technique_common>
+            <accessor count="4" source="#_1636-positions-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_1636-normals">
+          <float_array id="_1636-normals-array" count="12">
+0.000000 0.000000 1.000000 
+0.000000 0.000000 1.000000 
+0.000000 0.000000 1.000000 
+0.000000 0.000000 1.000000</float_array>
+          <technique_common>
+            <accessor count="4" source="#_1636-normals-array" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="_1636-uv0">
+          <float_array id="_1636-uv0-array" count="8">
+0.012195 0.012195 
+0.987805 0.987805 
+0.987805 0.012195 
+0.012195 0.987805</float_array>
+          <technique_common>
+            <accessor count="4" source="#_1636-uv0-array" stride="2">
+              <param name="S" type="float" />
+              <param name="T" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="_1636-vertices">
+          <input semantic="POSITION" source="#_1636-positions" />
+        </vertices>
+        <triangles count="2" material="material-0">
+          <input offset="0" semantic="VERTEX" source="#_1636-vertices" />
+          <input offset="0" semantic="NORMAL" source="#_1636-normals" />
+          <input offset="0" semantic="TEXCOORD" source="#_1636-uv0" set="0" />
+          <p>1 0 2 3 0 1</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="collada_scene">
+      <node id="_-870134" name="Quadro">
+        <node id="_-870136" name="Quadro_1_Moldura">
+          <instance_geometry url="#_1632">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="material-0" target="#_ee6573e4daabf4f80bc965f4956046ac" />
+              </technique_common>
+              <extra>
+                <technique profile="fl4re">
+                  <shadows>
+                    <castShadows>true</castShadows>
+                    <receiveShadows>true</receiveShadows>
+                  </shadows>
+                </technique>
+              </extra>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="_-870138" name="Quadro_2_Vidro">
+          <instance_geometry url="#_1634">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="material-0" target="#_44b34d53c5ee3450b9b6b08533dd163c">
+                  <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0" />
+                </instance_material>
+              </technique_common>
+              <extra>
+                <technique profile="fl4re">
+                  <shadows>
+                    <castShadows>true</castShadows>
+                    <receiveShadows>true</receiveShadows>
+                  </shadows>
+                </technique>
+              </extra>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="_-870140" name="Quadro_3_Imagem">
+          <instance_geometry url="#_1636">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="material-0" target="#_e45ce0a2722344514ae0c3e5d4debfca">
+                  <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0" />
+                </instance_material>
+              </technique_common>
+              <extra>
+                <technique profile="fl4re">
+                  <shadows>
+                    <castShadows>true</castShadows>
+                    <receiveShadows>true</receiveShadows>
+                  </shadows>
+                </technique>
+              </extra>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#collada_scene" />
+  </scene>
+</COLLADA>

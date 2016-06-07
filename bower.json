@@ -1,0 +1,25 @@
+{
+  "name": "decoraki",
+  "description": "3D Simulator for Interior Design",
+  "main": "index.js",
+  "authors": [
+    "Vitor Abner <vitorabner@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "three.js": "threejs#r69",
+    "colladaLoader": "https://raw.githubusercontent.com/mrdoob/three.js/master/examples/js/loaders/ColladaLoader.js",
+    "detector": "https://raw.githubusercontent.com/mrdoob/three.js/master/examples/js/Detector.js",
+    "handlebars": "3.x",
+    "isMobile": "^0.4.0"
+  }
+}

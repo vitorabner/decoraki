@@ -1,0 +1,11 @@
+//	Usage:
+
+//	<input class="range" type="range"/>
+
+.range {
+  width: 100%;
+
+	&:hover {
+		cursor: pointer;
+	}
+}

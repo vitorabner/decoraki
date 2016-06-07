@@ -1,0 +1,29 @@
+{
+  "browser": true,
+  "node": true,
+  "jasmine": true,
+  "camelcase": true,
+  "eqeqeq": true,
+  "indent": 4,
+  "latedef": "nofunc",
+  "bitwise": true,
+  "funcscope": false,
+  "evil": false,
+  "maxlen": 100,
+  "newcap": true,
+  "quotmark": "single",
+  "strict": true,
+  "undef": true,
+  "unused": true,
+  "eqnull": true,
+  "maxdepth": 2,
+  "maxcomplexity": 5,
+  "maxparams": 4,
+  "maxstatements": 10,
+  "shadow": false,
+  "globals": {
+    "THREE": false,
+    "isMobile": false,
+    "Detector": false
+  }
+}

@@ -1,0 +1,86 @@
+//- Image replace
+@mixin img-replace($img, $img-ext: svg, $display: block) {
+	//- https://css-tricks.com/a-complete-guide-to-svg-fallbacks/
+	@if($img-ext == svg) {
+		background-image: url('#{$img}'), linear-gradient(transparent, transparent);
+	}
+	@else{
+		background-image: url('#{$img}');
+	}
+	text-indent: -9999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	display: $display;
+}
+
+//- Image replace size
+@mixin img-replace-size($size) {
+	width: map-get($size, width);
+    height: map-get($size, height);
+}
+
+//- Generate BEM's element
+@mixin element($element) {
+	&__#{$element} {
+		@content;
+	}
+}
+
+//- Generate BEM's modifier
+@mixin modifier($modifier) {
+	&--#{$modifier} {
+		@content;
+	}
+}
+
+//- Generate button
+@mixin button-variant($btn) {
+	color: map-get($btn, color);
+	background-color: map-get($btn, bg);
+	border-color: map-get($btn, border);
+
+	&:hover {
+		color: map-get($btn, color);
+		background-color: darken(map-get($btn, bg), 10%);
+		border-color: darken(map-get($btn, border), 12%);
+	}
+}
+
+//- Calculate button size
+@mixin button-size($padding, $font-size, $line-height, $border-radius) {
+	padding: map-get($padding, vertical) map-get($padding, horizontal);
+	font-size: $font-size;
+	line-height: $line-height;
+	border-radius: $border-radius;
+}
+
+//- Wrapper
+@mixin wrapper($margin-left: auto, $margin-rght: auto) {
+	box-sizing: border-box;
+    margin-left: $margin-left;
+    margin-right: $margin-rght;
+	width: 96%;
+}
+
+//- Box
+@mixin box($bg-color, $border-color: $box-border-color, $height: auto, $box-shadow: null) { 
+	background-color: $bg-color;
+	border: 1px solid $border-color;
+	box-shadow: 0px 0px 52px -18px rgba(0,0,0,0.52);
+
+	@if($box-shadow != null){
+		box-shadow: $box-shadow;
+	}
+
+	height: $height;
+}
+
+//- Flexbox Container
+//- https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+@mixin flexbox-container($flow: row wrap, $align-items: flex-start, $align-content: flex-start, $justify: space-between) {
+	display: flex;
+	flex-flow: $flow;
+	justify-content: $justify;
+	align-items: $align-items;
+	align-content: $align-content;
+}

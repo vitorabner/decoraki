@@ -1,0 +1,15 @@
+// Usage:
+
+//  <main class="main">
+//      <div class="main__wrapper">
+//      </div>
+//  </main>
+
+.main {
+    height: calc(100% - #{$header-height});
+
+    @include element(wrapper) {
+		height: 100%;
+		@include wrapper;
+    }
+}

@@ -1,0 +1,73 @@
+//	Usage:
+
+//	<div class="simulator__scene">
+//		<ul class="menu menu--hide scene__menu">
+//			<li class="menu__item">
+//				<button class="btn btn__danger btn--small">Delete</button>
+//			</li>
+//			<li class="menu__item">
+//				<input class="range" type="range" min="-180" max="180"/>
+//			</li>
+//			<li class="menu__item">
+//				<button class="btn btn__secondary btn--small">Close</button>
+//			</li>
+//		</ul>
+//		<ul class="menu menu--hide scene__messages">
+//			<li class="menu__item">Default</li>
+//			<li class="menu__item">
+//				<button class="btn btn__secondary btn--small">Close</button>
+//			</li>
+//		</ul>
+// 		<div class="scene__canvas"></div>
+//	</div>
+
+.scene {
+
+	@include element(messages) {
+		color: $color-secondary;
+		font-weight: $font-weight--light;
+		left:0;
+		margin-left:auto;
+		margin-right:auto;
+		min-width: 368px;
+
+		position: absolute;
+		right:0;
+		top: 4%;
+		width: 92%;
+
+		@media (min-width: $simulator-menu-breakpoint) {
+			min-width: 368px;
+			width: 40.8%;
+		}
+	}
+
+    @include element(contact) {
+        color: $color-secondary;
+        font-weight: $font-weight--light;
+        bottom: 2%;
+        margin-left:auto;
+        margin-right:auto;
+        position: absolute;
+        right:2%;
+        width: 132px;
+        font-style: italic;
+        font-size: $font-size--small;
+    }
+
+	@include element(menu) {
+		bottom: 8%;
+		left:0;
+		margin-left:auto;
+		margin-right:auto;
+		min-width: 250px;
+		position: absolute;
+		right:0;
+		width: 35%;
+	}
+
+	@include element(canvas){
+		height: 100%;
+		width: 100%;
+	}
+}

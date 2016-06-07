@@ -1,0 +1,33 @@
+//	Usage:
+
+// 	<ul class="product-list">
+// 		<li class="product-list__item" data-product-id="{{@index}}">	
+//			{{> product}}
+// 		</li>
+// 	</ul>	    
+
+
+.product-list {
+	margin: 1em;
+
+	@include flexbox-container($flow: column);
+
+	@media (min-width: $product-list-breakpoint) {
+		align-items: center;
+		flex-flow: row wrap;
+	}
+	
+	@include element(item) {
+	    font-size: 0.87em;
+	    margin-bottom: 15px;
+	    width: 100%;
+
+	    @media (min-width: $product-list-breakpoint) {
+			width: calc(50% - 0.5em);
+		}
+	}
+
+	@include element(btn) {
+	    margin-top: 8px;
+	}
+}

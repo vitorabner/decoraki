@@ -1,0 +1,17 @@
+// Usage:
+
+//  <header class="header">
+//      <div class="header__wrapper">
+//      </div>
+//  </header>
+
+.header {
+    background-color: $header-bg-color;
+    border-bottom: 1px solid $header-border-color;
+    min-width: 100%;
+
+    @include element(wrapper) {
+		height: $header-height;
+	    @include wrapper;
+    }
+}

@@ -1,0 +1,13 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: $body-bg-color;
+	font-family: $font-family-primary;
+	font-size: $font-size--base;	
+	line-height: $line-height--base;
+    min-height: 100%;
+	position: relative;
+	overflow: hidden;  
+}

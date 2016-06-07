@@ -1,0 +1,41 @@
+//	Usage:
+
+//	<button class="btn [btn__primary] [btn__secondary] [btn__danger] [btn--small] [btn--block]">Source Code</button>
+
+.btn {
+	background-image: none;
+	border: 1px solid transparent;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: $font-weight--light;
+	margin-bottom: 0;
+	outline-style: none;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+
+	@include button-size($padding--base, $font-size--base, $line-height--base, $btn-border-radius--base);
+
+	@include element(primary) {
+		@include button-variant($btn-primary);
+	}
+
+	@include element(danger) {
+		@include button-variant($btn-danger);
+	}
+
+	@include element(secondary) {
+		@include button-variant($btn-secondary);
+	}
+	
+	@include modifier(small) {
+		font-weight: $font-weight--light;
+		@include button-size($padding--small, $font-size--small, $line-height--small, $btn-border-radius--small);
+	}
+
+	@include modifier(block) {
+		display: block;
+		letter-spacing: 0.5px;
+		width: 100%;
+	}
+}

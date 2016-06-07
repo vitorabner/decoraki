@@ -1,0 +1,94 @@
+//- Logo
+$logo-svg-path : './../img/logo.svg';
+$logo-png-path : './../img/logo.png';
+
+$logo--base: (
+	width: 310px,
+	height: 60px
+);
+
+$logo--small: (
+	width: 154px,
+	height: 22px
+);
+
+//- General components
+$padding--base: (
+	vertical  : 6px,
+	horizontal: 12px
+);
+
+$padding--small: (
+	vertical: 3px,
+	horizontal: 3px
+);
+
+//- Typography
+$font-family-primary  	 : Helvetica, Arial, sans-serif;
+
+$font-weight--thin       : 100;
+$font-weight--light      : 300;
+$font-weight--medium     : 400;
+$font-weight--bold       : 700;
+$font-weight--ultra-bold : 900;
+
+$font-size--base	: 16px;	
+$font-size--small	: ceil($font-size--base * 0.8);
+
+//- Unitless: http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/
+$line-height--base	: ($font-size--base + map-get($padding--base, vertical)) / $font-size--base;
+$line-height--small	: ($font-size--small + map-get($padding--small, vertical)) / $font-size--small;
+
+//- Base Colors
+$white 			: #fff;
+$alabaster		: #f7f7f7;
+$black-haze		: #fafbfb;
+$porcelain		: #e5e9ea;
+$mandy			: #e15253;
+$mantis			: #69be59;
+$scarlet		: #ff1405;
+$danube			: #569cc8;
+
+//- Color Usage
+$body-bg-color 					: $alabaster;
+$header-bg-color				: $white;
+$box-border-color				: $porcelain;
+$header-border-color			: $porcelain;
+$product-name-color				: $mandy;
+$product-bg-color				: $white;
+$scene-bg-color 				: $black-haze;
+$products-bg-color 				: $black-haze;
+$menu-bg-color 					: $white;
+$color-danger					: $scarlet;
+$color-primary					: $mantis;
+$color-secondary				: $danube;
+
+//- Buttons
+$btn-border-radius--base	: 4px;
+$btn-border-radius--small	: 3px;
+
+$btn-primary: (
+	color: $white,
+	bg: $color-primary,
+	border: darken($color-primary, 5%)
+);
+
+$btn-secondary: (
+	color: $white,
+	bg: $color-secondary,
+	border: darken($color-secondary, 5%)
+);
+
+$btn-danger: (
+	color: $white,
+	bg: $color-danger,
+	border: darken($color-danger, 5%)
+);
+
+//- Sizes
+$header-height				: 50px;
+
+//- Breakpoints
+$simulator-products-breakpoint	: 575px;
+$simulator-menu-breakpoint		: 575px;
+$product-list-breakpoint		: 1050px;

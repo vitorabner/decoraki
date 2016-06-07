@@ -1,0 +1,58 @@
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+figcaption, figure, header,
+main, nav, section {
+  display: block;
+}
+
+canvas {
+  display: inline-block;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+  outline-width: 0;
+}
+
+img {
+  border-style: none;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+button, input {
+  font: inherit;
+  margin: 0;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button {
+  text-transform: none;
+}
+
+img, ol, ul, li, figure {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ol, ul {
+  list-style: none; 
+}

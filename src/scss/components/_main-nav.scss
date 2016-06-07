@@ -1,0 +1,15 @@
+//	Usage:
+
+//	<nav>
+//		<ul class="main-nav">
+//			<li class="main-nav__item">
+//				<button class="btn">Github</button>
+//			</li>
+//		</ul>
+//	</nav>
+
+.main-nav {
+    @include element(item) {
+        display: inline-block;
+    }
+}

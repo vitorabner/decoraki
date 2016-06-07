@@ -1,0 +1,24 @@
+//	Usage:
+
+// 	<ul class="menu">
+// 		<li class="menu__item">
+// 			<button class="btn btn__danger btn--small">Delete</button>
+// 		</li>
+// 		<li class="menu__item">
+// 			<button class="btn btn__secondary btn--small">Close</button>
+// 		</li>
+// 	</ul>
+
+.menu {
+    transition: opacity 0.2s linear;
+    @include flexbox-container($flow: row nowrap, $align-items: center);
+    @include box($menu-bg-color);
+
+    @include element(item){
+        padding: map-get($padding--base, vertical) map-get($padding--base, horizontal);
+    }
+
+    @include modifier(hide) {
+        opacity:0;
+    }
+}

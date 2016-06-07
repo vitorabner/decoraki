@@ -1,0 +1,16 @@
+//	Usage:
+
+//	<div class="logo [logo--small]">
+//		decoraki
+//	</div>
+
+.logo {
+	background-image: url('#{$logo-png-path}');
+	@include img-replace($logo-svg-path);
+	@include img-replace-size($logo--base);
+
+	@include modifier(small) {
+		background-size: map-get($logo--small, width) map-get($logo--small, height);
+		@include img-replace-size($logo--small);
+	}
+}

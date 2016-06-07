@@ -1,0 +1,41 @@
+//	Usage:
+
+//	<div class="simulator">
+//		<div class="simulator__products">
+//			{{> product-list}}
+//		</div>
+//		<div class="simulator__scene">
+//			{{> scene}}
+//		</div>
+//	</div>
+
+.simulator {
+	height: 100%;
+
+	@include flexbox-container ($align-items: center, $align-content: center);
+
+	@include element(products) {
+		display: none;
+		flex-basis: 0px;
+		flex-grow: 1;
+		margin-right: 2%;
+		overflow: auto;
+
+		@include box($products-bg-color, $height: 90%);
+
+		@media (min-width: $simulator-products-breakpoint) {
+			display: block;
+		}
+
+		@include modifier(hide) {
+			display: none;
+		}
+	}
+
+	@include element(scene) {
+		flex-basis: 0px;
+		flex-grow: 2;
+		position: relative;
+		@include box($products-bg-color, $height: 90%);
+	}
+}
