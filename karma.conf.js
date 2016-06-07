@@ -17,7 +17,7 @@ module.exports = function(config) {
         files: [
             //- lib
             "lib/three.js/build/three.js",
-            "lib/ColladaLoader/index.js",
+            "lib/colladaLoader/index.js",
             "lib/isMobile/isMobile.min.js",
             "lib/detector/index.js",
 
