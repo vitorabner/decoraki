@@ -27,9 +27,6 @@
 
             console.log('try exec init scene');
 
-            console.log(scene);
-            console.log(window.decoraki.scene);
-
             scene.init();
         });
 
