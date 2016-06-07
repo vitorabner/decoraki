@@ -27,8 +27,6 @@
 
             stub(control, 'checkWebGL');
 
-            console.log('try exec init scene');
-
             scene.init();
         });
 

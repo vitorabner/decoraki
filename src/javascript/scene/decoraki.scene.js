@@ -47,9 +47,7 @@
     };
 
     var _initScene = function () {
-        console.log('new THREE.Scene()-----------------');
         _sceneData.scene = new THREE.Scene();
-        console.log('Checking _sceneData.scene', _sceneData.scene);
         _sceneData.animationFrame = false;
 
         _colliders.walls = [];
@@ -58,23 +56,14 @@
     };
 
     var _init = function () {
-        console.log('1try exec init scene');
-
         _sceneData.container = control.getContainer();
 
-        console.log('2try exec init scene');
-
         if (!_sceneData.container) return;
-
-
-        console.log('3try exec init scene');
 
         if (control.checkWebGL()) {
             _sceneData.container.appendChild(control.getWebGLErrorMessage());
             return;
         }
-
-        console.log('4try new THREE.Scene()-----------------');
 
         _initScene();
         _initRenderer();

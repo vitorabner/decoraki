@@ -2,7 +2,7 @@ module.exports = function(config) {
     config.set({
 
         client: {
-            captureConsole: true
+            captureConsole: false
         },
 
         plugins: [
@@ -36,6 +36,6 @@ module.exports = function(config) {
         reporters: ['progress'],
         browsers: ['Firefox'],
 
-        singleRun: false
+        singleRun: true
     });
 }
