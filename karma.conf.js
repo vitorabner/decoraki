@@ -1,5 +1,5 @@
 module.exports = function(config) {
-    config.set({
+    var configuration = {
 
         client: {
             captureConsole: false
@@ -9,6 +9,7 @@ module.exports = function(config) {
             'karma-chai',
             'karma-sinon',
             'karma-mocha',
+            'karma-chrome-launcher',
             'karma-firefox-launcher'
         ],
 
@@ -34,8 +35,21 @@ module.exports = function(config) {
         ],
 
         reporters: ['progress'],
-        browsers: ['Firefox'],
+        browsers: ['Chrome', 'Firefox'],
+
+        customLaunchers: {
+            chromeTravis: {
+                base: 'Chrome',
+                flags: ['--no-sandbox']
+            }
+        },
 
         singleRun: true
-    });
-}
+    }
+
+    if(process.env.TRAVIS){
+        configuration.browsers = ['chromeTravis', 'Firefox'];
+    }
+
+    config.set(configuration);
+};
