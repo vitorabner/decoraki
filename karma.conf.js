@@ -1,5 +1,5 @@
 module.exports = function(config) {
-    config.set({
+    var configuration = {
 
         client: {
             captureConsole: false
@@ -37,5 +37,11 @@ module.exports = function(config) {
         browsers: ['Chrome'],
 
         singleRun: false
-    });
+    }
+
+    if(process.env.TRAVIS){
+        configuration.browsers = ['Chrome_travis_ci'];
+    }
+
+    config.set(configuration);
 }
