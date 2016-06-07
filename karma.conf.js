@@ -36,11 +36,18 @@ module.exports = function(config) {
         reporters: ['progress'],
         browsers: ['Chrome'],
 
+        customLaunchers: {
+            chromeTravis: {
+                base: 'Chrome',
+                flags: ['--no-sandbox']
+            }
+        },
+
         singleRun: false
     }
 
     if(process.env.TRAVIS){
-        configuration.browsers = ['Chrome_travis_ci'];
+        configuration.browsers = ['chromeTravis'];
     }
 
     config.set(configuration);
