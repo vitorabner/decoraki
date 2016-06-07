@@ -25,6 +25,8 @@
                 return container;
             });
 
+            stub(control, 'createEvent');
+
             console.log('try exec init scene');
 
             scene.init();
