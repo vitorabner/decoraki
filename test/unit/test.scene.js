@@ -25,6 +25,8 @@
                 return container;
             });
 
+            console.log('try exec init scene');
+
             scene.init();
         });
 
