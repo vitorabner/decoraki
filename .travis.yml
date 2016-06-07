@@ -9,6 +9,7 @@ before_script:
   - npm install -g bower
   - bower install -f
 
+sudo: required
 language: node_js
 node_js:
   - stable
