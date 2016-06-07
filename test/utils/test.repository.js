@@ -11,9 +11,7 @@
     //- Room
     rooms.push({
         model: 'Env0002.dae',
-        folderName: 'room',
         moveType: 'none',
-        descriptionName: 'Retangular Room',
         category: 'room',
         rotations: {
             walls1: 270,
@@ -26,17 +24,12 @@
     //- Products
     products.push({
         model: 'Sofa01.dae',
-        folderName: 'Sofa01',
         moveType: 'floor',
-        descriptionName: 'Kael The Invoker',
-        descriptionImage: 'invoker.jpg',
         category: 'furniture'
     });
 
     products.push({
         texture: '#864038',
-        descriptionName: 'Deadpool',
-        descriptionImage: 'deadpool.svg',
         category: 'paint'
     });
 
