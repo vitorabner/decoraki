@@ -14,8 +14,8 @@
     var _initElements = function () {
         _el.productList = document.querySelector('.product-list');
         _el.container = document.querySelector('.scene__canvas');
-        _el.menu = document.querySelector('.scene__menu');
-        _el.messages = document.querySelector('.scene__messages');
+        _el.menu = document.querySelector('.scene__menu-action');
+        _el.messages = document.querySelector('.scene__menu-message');
         _el.range = _el.menu.querySelector('input[type="range"]');
     };
 
@@ -48,12 +48,6 @@
     };
 
     var _createEvent = function (origin) {
-
-        if (_isMobile) {
-            window.addEventListener('resize', decoraki.scene.resizeScene);
-            return;
-        }
-
         var events = {};
 
         events.canvas = function () {
@@ -70,15 +64,12 @@
                 event.dataTransfer.clearData();
                 decoraki.simulator.insertObject(product);
             });
-
-            window.addEventListener('resize', decoraki.scene.resizeScene);
         };
 
         events.messages = function () {
             _el.messages.addEventListener('click', function (event) {
                 var $target = event.target;
                 var text = $target.textContent.toLowerCase();
-
                 if (text === 'close') _setMessageState('hide');
             });
         };
@@ -132,13 +123,21 @@
             _el.container.addEventListener('mousemove', decoraki.simulator.hideWallObj);
         };
 
+        events.scene = function () {
+            window.addEventListener('resize', decoraki.scene.resizeScene);
+        };
+
         if (events[origin]) events[origin]();
     };
 
     var _initEvents = function () {
+        _createEvent('messages');
+        _createEvent('scene');
+
+        if (_isMobile) return;
+
         _createEvent('productList');
         _createEvent('menu');
-        _createEvent('messages');
     };
 
     var _init = function () {

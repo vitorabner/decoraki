@@ -23,13 +23,13 @@
 
 .scene {
 
-	@include element(messages) {
+	@include element(menu-message) {
 		color: $color-secondary;
 		font-weight: $font-weight--light;
 		left:0;
 		margin-left:auto;
 		margin-right:auto;
-		min-width: 368px;
+		min-width: 268px;
 
 		position: absolute;
 		right:0;
@@ -41,6 +41,17 @@
 			width: 40.8%;
 		}
 	}
+
+    @include element(menu-action) {
+        bottom: 8%;
+        left:0;
+        margin-left:auto;
+        margin-right:auto;
+        min-width: 250px;
+        position: absolute;
+        right:0;
+        width: 35%;
+    }
 
     @include element(contact) {
         color: $color-secondary;
@@ -54,17 +65,6 @@
         font-style: italic;
         font-size: $font-size--small;
     }
-
-	@include element(menu) {
-		bottom: 8%;
-		left:0;
-		margin-left:auto;
-		margin-right:auto;
-		min-width: 250px;
-		position: absolute;
-		right:0;
-		width: 35%;
-	}
 
 	@include element(canvas){
 		height: 100%;
