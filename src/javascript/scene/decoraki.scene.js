@@ -46,19 +46,25 @@
         _sceneData.camera.updateProjectionMatrix();
     };
 
-    var _initScene = function () {
-        _sceneData.scene = new THREE.Scene();
-        _sceneData.animationFrame = false;
-
+    var _initColliders = function () {
         _colliders.walls = [];
         _colliders.floor = [];
         _colliders.furnitures = [];
     };
 
+    var _initScene = function () {
+        _sceneData.scene = new THREE.Scene();
+        _sceneData.animationFrame = false;
+    };
+
+    var _initSceneObjects = function () {
+        _initColliders();
+        _initRenderer();
+        _initCamera();
+    };
+
     var _init = function () {
         _sceneData.container = control.getContainer();
-
-        if (!_sceneData.container) return;
 
         if (control.checkWebGL()) {
             _sceneData.container.appendChild(control.getWebGLErrorMessage());
@@ -66,12 +72,14 @@
         }
 
         _initScene();
-        _initRenderer();
-        _initCamera();
+        _initSceneObjects();
+
+        if (control.isMobile()) {
+            _initMobile();
+            return;
+        }
 
         control.createEvent('canvas');
-
-        if (control.isMobile()) _initMobile();
     };
 
     var _addObject = function (object) {
@@ -128,14 +136,14 @@
         var unprojectVector = vectorPosition.unproject(_sceneData.camera);
         var unprojectOffset = unprojectVector.sub(_sceneData.camera.position).normalize();
 
-        var raycaster = new THREE.Raycaster(_sceneData.camera.position, unprojectOffset);
+        var ray = new THREE.Raycaster(_sceneData.camera.position, unprojectOffset);
         var intersected = {};
 
-        if (toPos !== undefined) raycaster = new THREE.Raycaster(fromPos, toPos.normalize());
+        if (toPos !== undefined) ray = new THREE.Raycaster(fromPos, toPos.normalize());
 
-        intersected.walls = raycaster.intersectObjects(_colliders.walls)[0] || undefined;
-        intersected.floor = raycaster.intersectObjects(_colliders.floor)[0] || undefined;
-        intersected.furnitures = raycaster.intersectObjects(_colliders.furnitures)[0] || undefined;
+        intersected.walls = ray.intersectObjects(_colliders.walls)[0] || undefined;
+        intersected.floor = ray.intersectObjects(_colliders.floor)[0] || undefined;
+        intersected.furnitures = ray.intersectObjects(_colliders.furnitures)[0] || undefined;
 
         return intersected;
     };

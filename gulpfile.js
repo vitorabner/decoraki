@@ -212,4 +212,3 @@ gulp.task('default', ['clean'], function() {
 gulp.task('deploy', ['clean'], function() {
     gulp.start('deploy-html', 'deploy-sass', 'deploy-js', 'img', 'svg');
 });
-
