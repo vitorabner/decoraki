@@ -26,13 +26,13 @@ var lib = {
     src: ['lib/colladaLoader/index.js', 'lib/detector/index.js']
 };
 
-//- SASS
-var scssIdx = ['src/scss/index.scss'];
-var scss = ['src/scss/**/*.scss'];
-
 //- HTML
 var htmlIdx = ['src/index.html'];
 var html = ['src/**/*.html'];
+
+//- SASS
+var scssIdx = ['src/scss/index.scss'];
+var scss = ['src/scss/**/*.scss'];
 
 //- Images
 var img = ['src/images/**/*', '!src/images/**/*.svg'];
