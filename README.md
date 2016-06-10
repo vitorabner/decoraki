@@ -1,2 +1,1 @@
-# DECORAKI
-Interior design simulator
+![Decoraki Logo](http://www.decoraki.co/img/decoraki-full-logo.png)
