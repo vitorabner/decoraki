@@ -61,7 +61,7 @@ To insert the sofa in simulator:
 
 ## License
 
-[MIT License](https://github.com/vitorabner/blob/master/readme/LICENSE.md) © Vitor Abner <vitorabner@gmail.com>
+[MIT License](https://github.com/vitorabner/blob/master/LICENSE.md) © Vitor Abner <vitorabner@gmail.com>
 
 
 
