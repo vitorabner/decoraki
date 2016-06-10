@@ -59,7 +59,9 @@ To insert the sofa in simulator:
     simulator.insertObject(sofa);
 ```
 
+## License
 
+[MIT License](https://github.com/vitorabner/blob/master/LICENSE.md) © Vitor Abner <vitorabner@gmail.com>
 
 
 
