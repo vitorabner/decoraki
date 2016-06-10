@@ -1,5 +1,5 @@
 ![Decoraki Logo](http://www.decoraki.co/img/decoraki-full-logo.png)
-> 3D Interior design application build with ThreeJS - http://www.decoraki.co
+> 3D Simulator for interior design - http://www.decoraki.co
 
 ## Decoraki
 
@@ -27,9 +27,9 @@ npm run gulp
 npm run gulp watch
 ```
 
-## Collada Format
+## File format
 
-Decoraki only supports 3D collada(.dae) format. If you have another file format don't worry, it's very easy to convert. You can use softwares like SketchUp, Blender and Collada Exporter for Unity3D.
+Decoraki only supports 3D collada(.dae) format. If you have another 3D file format, don't worry, it's very easy to convert. You can use softwares like SketchUp, Blender and Collada Exporter for Unity3D.
 
 ## How it works
 
