@@ -1,2 +1,2 @@
-# DECORAKI (NOT SAFE FOR PRODUCTION)
+# DECORAKI
 Interior design simulator
