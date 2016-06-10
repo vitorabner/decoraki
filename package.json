@@ -9,13 +9,6 @@
     "fix": "./node_modules/.bin/jscs src --fix && ./node_modules/.bin/jscs test --fix || true",
     "test": "./node_modules/karma/bin/karma start || true"
   },
-  "Design": [
-    "threejs",
-    "3d",
-    "simulator",
-    "interior",
-    "design"
-  ],
   "author": "Vitor Abner <vitorabner@gmail.com>",
   "license": "MIT",
   "devDependencies": {
