@@ -61,7 +61,7 @@ To insert the sofa in simulator:
 
 ## Browser Support
 
-Unfortunately WebGL isn't supported by all browser, but as you can see [here](http://caniuse.com/#search=webgl), Chrome(45+) is the best browser to run this project.
+Unfortunately WebGL isn't supported by all browser, but as you can see [here](http://caniuse.com/#search=webgl) Chrome(45+) is the best browser to run this project.
 
 ## License
 
