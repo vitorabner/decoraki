@@ -152,11 +152,11 @@
         _el.range.value = rotationDegree;
     };
 
-    var _showTip = function () {
-        var tipMoveCamera = '<div><b>Right mouse button</b>: Camera controls</div>';
-        var tipSelectDrag = '<div><b>Left mouse button</b>: Select and drag</div>';
+    var _showTip = function (tipMessage) {
+        var tip = tipMessage || '<div><b>Right mouse button</b>: Camera controls</div>' +
+                                '<div><b>Left mouse button</b>: Select and drag</div>';
 
-        _setMessageState('show', tipMoveCamera + tipSelectDrag);
+        _setMessageState('show', tip);
     };
 
     //-
@@ -200,8 +200,8 @@
             return Detector.getWebGLErrorMessage();
         },
 
-        showTip: function () {
-            _showTip();
+        showTip: function (tipMessage) {
+            _showTip(tipMessage);
         }
     };
 
