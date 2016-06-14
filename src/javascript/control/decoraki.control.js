@@ -82,6 +82,14 @@
                 decoraki.simulator.rotateObject(angleRad);
             });
 
+            //- IE
+            _el.range.addEventListener('change', function (event) {
+                var $target = event.target;
+                var angleRad = geometry.degreesToRadians($target.value);
+
+                decoraki.simulator.rotateObject(angleRad);
+            });
+
             _el.menu.addEventListener('click', function (event) {
                 var $target = event.target;
                 var text = $target.textContent.toLowerCase();
