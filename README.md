@@ -33,7 +33,7 @@ Decoraki only supports 3D collada(.dae) format. If you have another 3D file form
 
 ## How it works
 
-First we need to create an model(you can see all examples in src/helpers/decoraki.repository.js):
+First we need to create a model(you can see all examples in src/helpers/decoraki.repository.js):
 
 ```sh
     var sofa = {
