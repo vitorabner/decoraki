@@ -8,6 +8,8 @@ before_install:
 before_script:
   - npm install -g bower
   - bower install -f
+  - ./node_modules/.bin/jshint src
+  - ./node_modules/.bin/jscs src --fix && ./node_modules/.bin/jscs test --fix
 
 sudo: required
 language: node_js
