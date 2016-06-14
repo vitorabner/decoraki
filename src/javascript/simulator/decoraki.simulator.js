@@ -9,7 +9,7 @@
     var geometry = decoraki.geometry;
 
     //-
-    //- PrivatePrivatePrivatePrivatePrivatePrivatePrivatePrivatePrivatePrivatePrivatePrivatePrivatePrivatePrivatePrivate
+    //- Private
     //-
 
     var _controller = {};
