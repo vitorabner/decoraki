@@ -67,7 +67,7 @@ Unfortunately WebGL isn't fully supported by all browser, but as you can see [he
 
 ## Contributing
 
-If you want to colaborate just check the project's issues.
+If you want to colaborate check the project's issues.
 
 1. Fork the repository
 2. Create a new branch
