@@ -1,7 +1,7 @@
 {
   "name": "decoraki",
   "version": "1.0.0",
-  "description": "3D Simulator for Interior Design",
+  "description": "3D Simulator for interior design",
   "main": "./src/javascript/app.js",
   "scripts": {
     "gulp": "gulp",

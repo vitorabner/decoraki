@@ -34,6 +34,7 @@ module.exports = function(config) {
         ],
 
         reporters: ['progress'],
+
         browsers: ['Chrome'],
 
         customLaunchers: {
