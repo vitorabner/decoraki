@@ -65,6 +65,20 @@ To insert the sofa in simulator:
 
 Unfortunately WebGL isn't fully supported by all browser, but as you can see [here](http://caniuse.com/#search=webgl) **Chrome(45+)** is the best browser to run this project.
 
+## Contributing
+
+If you want to colaborate just check the project's issues.
+
+1. Fork the repository
+2. Create a new branch
+3. Implement your solution
+4. Commit
+5. Open a Pull Request
+
+Remeber: Always run lint and test. If you change the core system update the tests.
+
+Thanks!
+
 ## License
 
 [MIT License](https://github.com/vitorabner/decoraki/blob/master/LICENSE.md) © Vitor Abner (<vitorabner@gmail.com>)
