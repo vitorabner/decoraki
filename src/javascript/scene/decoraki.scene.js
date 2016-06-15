@@ -208,8 +208,8 @@
     //-
 
     decoraki.scene = {
-        init: function ($container) {
-            _init($container);
+        init: function () {
+            _init();
         },
 
         addObject: function (object) {

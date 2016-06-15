@@ -9,8 +9,7 @@ module.exports = function(config) {
             'karma-chai',
             'karma-sinon',
             'karma-mocha',
-            'karma-chrome-launcher',
-            'karma-firefox-launcher'
+            'karma-chrome-launcher'
         ],
 
         frameworks: ['mocha', 'sinon', 'chai'],
@@ -35,7 +34,7 @@ module.exports = function(config) {
         ],
 
         reporters: ['progress'],
-        browsers: ['Chrome', 'Firefox'],
+        browsers: ['Chrome'],
 
         customLaunchers: {
             chromeTravis: {
@@ -48,7 +47,7 @@ module.exports = function(config) {
     }
 
     if(process.env.TRAVIS){
-        configuration.browsers = ['chromeTravis', 'Firefox'];
+        configuration.browsers = ['chromeTravis'];
     }
 
     config.set(configuration);
