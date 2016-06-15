@@ -3,6 +3,8 @@
 
 ## Decoraki
 
+[![Build Status](https://img.shields.io/travis/vitorabner/decoraki/master.svg?style=flat)](https://travis-ci.org/vitorabner/decoraki)
+
 Decoraki is a 3D simulator that aims to help people to decorate and furnish their homes, providing them a way to inspire, combine products and bring their ideias to life.
 
 ## Install
