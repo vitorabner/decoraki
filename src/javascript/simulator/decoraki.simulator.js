@@ -43,7 +43,7 @@
             _controller.selectedObject = object.children[0];
 
             if (_controller.isMobile) {
-                control.showTip('This is a mobile version. Please open in desktop browser.');
+                control.showTip('This is a mobile version!');
                 _animateFurniture();
                 return;
             }
