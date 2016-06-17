@@ -125,16 +125,17 @@
 
         var position = {};
 
-        position.x = ((x - offsetLeft) / _sceneData.renderer.domElement.width) * 2 - 1;
-        position.y = -((y - offsetTop) / _sceneData.renderer.domElement.height) * 2 + 1;
+        position.x = ((x - offsetLeft) / _sceneData.renderer.domElement.clientWidth) * 2 - 1;
+        position.y = -((y - offsetTop) / _sceneData.renderer.domElement.clientHeight) * 2 + 1;
 
         return position;
     };
 
     var _getObjects = function (fromPos, toPos) {
         var vectorPosition = new THREE.Vector3(fromPos.x, fromPos.y, 0.5);
-        var unprojectVector = vectorPosition.unproject(_sceneData.camera);
-        var unprojectOffset = unprojectVector.sub(_sceneData.camera.position).normalize();
+        vectorPosition.unproject(_sceneData.camera);
+
+        var unprojectOffset = vectorPosition.sub(_sceneData.camera.position).normalize();
 
         var ray = new THREE.Raycaster(_sceneData.camera.position, unprojectOffset);
         var intersected = {};
