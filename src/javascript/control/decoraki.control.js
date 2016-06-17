@@ -58,6 +58,9 @@
             });
 
             $canvas.addEventListener('drop', function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+
                 var id = event.dataTransfer.getData('text');
                 var product = repository.getProductById(id);
 
@@ -108,7 +111,7 @@
 
                 if ($target.classList.contains('product__img')) {
                     var id = $target.parentNode.parentNode.dataset.productId;
-                    event.dataTransfer.setData('text/plain', id);
+                    event.dataTransfer.setData('text', id);
                 }
             });
 
