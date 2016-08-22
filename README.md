@@ -81,7 +81,6 @@ Thanks!
 
 ## License
 
-[MIT License](https://github.com/vitorabner/decoraki/blob/master/LICENSE.md) © Vitor Abner (<vitorabner@gmail.com>)
-
+[MIT License](https://github.com/vitorabner/decoraki/blob/master/LICENSE.md) © Vitor Abner
 
 
