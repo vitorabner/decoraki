@@ -12,8 +12,8 @@
 
     //- Set URL for textures and models(3D)
     var assetsURL = {
-        models: 'http://ec2-52-67-4-85.sa-east-1.compute.amazonaws.com/assets/models',
-        textures: 'http://ec2-52-67-4-85.sa-east-1.compute.amazonaws.com/assets/textures'
+        models: 'http://ec2-52-67-128-55.sa-east-1.compute.amazonaws.com/assets/models',
+        textures: 'http://ec2-52-67-128-55.sa-east-1.compute.amazonaws.com/assets/textures'
     };
 
     //- Initializers
