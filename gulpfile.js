@@ -127,7 +127,7 @@ gulp.task('js', ['lib', 'hbs'], function() {
 });
 
 
-gulp.task('deploy-js', ['lib', 'hbs'], function() {
+gulp.task('prod-js', ['lib', 'hbs'], function() {
     js.unshift('dist/temporary-cache/hbs/**/*.js');
     js.unshift('dist/lib/**/*.js');
 
@@ -152,7 +152,7 @@ gulp.task('sass', function() {
                 .pipe(gulp.dest('dist/css/'));
 });
 
-gulp.task('deploy-sass', function() {
+gulp.task('prod-sass', function() {
     return gulp.src(scssIdx)
                 .pipe(sass({outputStyle: 'compressed'}))
                 .pipe(rename({basename: 'index.min'}))
@@ -170,7 +170,7 @@ gulp.task('html', function() {
                 .pipe(gulp.dest('dist/'));
 });
 
-gulp.task('deploy-html', function() {
+gulp.task('prod-html', function() {
     return gulp.src(htmlIdx)
                 .pipe(htmlReplace({
                     'js': ['js/index.min.js'],
@@ -205,10 +205,10 @@ gulp.task('clean', function() {
     del.sync(['./dist']);
 });
 
-gulp.task('default', ['clean'], function() {
+gulp.task('dev', ['clean'], function() {
     gulp.start('html', 'img', 'svg', 'sass', 'js');
 });
 
-gulp.task('deploy', ['clean'], function() {
-    gulp.start('deploy-html', 'deploy-sass', 'deploy-js', 'img', 'svg');
+gulp.task('prod', ['clean'], function() {
+    gulp.start('prod-html', 'prod-sass', 'prod-js', 'img', 'svg');
 });

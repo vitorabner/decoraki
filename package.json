@@ -4,7 +4,9 @@
   "description": "3D Simulator for interior design",
   "main": "./src/javascript/app.js",
   "scripts": {
-    "gulp": "gulp",
+    "dev": "gulp dev && gulp watch",
+    "prod": "gulp prod",
+    "postinstall": "bower install",
     "lint": "./node_modules/.bin/jshint src || true",
     "fix": "./node_modules/.bin/jscs src --fix && ./node_modules/.bin/jscs test --fix || true",
     "test": "./node_modules/karma/bin/karma start || true"
@@ -12,6 +14,7 @@
   "author": "Vitor Abner <vitorabner@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "bower": "^1.7.9",
     "browser-sync": "^2.11.2",
     "chai": "^3.5.0",
     "compression": "^1.6.1",
