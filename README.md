@@ -15,18 +15,10 @@ First install all dependecies
 npm install
 ```
 
-```sh
-bower install
-```
-
 And then run the project
 
 ```sh
-npm run gulp
-```
-
-```sh
-npm run gulp watch
+npm run dev
 ```
 
 ## File format
